@@ -1,0 +1,30 @@
+<!--4 Desenvolva um algoritmo que leia dois números inteiros e mostre o somatório entre eles. 
+Ex: 
+Digite um valor: 8 
+Digite outro valor: 5 
+Msg: A soma entre 8 e 5 é igual a 13.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_4</title>
+</head>
+<body>
+    <input type="text" id="valorum">
+    </br>
+    <input type="text" id="valordois">
+    </br>
+    <button onclick="exibirsomatorio()">Clique Aqui</button>
+
+    <script>
+        function exibirsomatorio(){
+            var valorum = document.getElementById("valorum").value;
+            var valordois = document.getElementById("valordois").value;
+            var resultado = Number(valorum) + Number(valordois);
+            alert("A soma entre " + valorum + " e " + valordois + " é igual a " + resultado);
+        }
+    </script>
+</body>
+</html>

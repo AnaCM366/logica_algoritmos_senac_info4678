@@ -1,0 +1,30 @@
+<!--3 Crie um programa que leia o nome e o salário de um funcionário, mostrando no final uma mensagem. 
+Ex: 
+Nome do Funcionário: Maria do Carmo 
+Salário: 1850,45 
+Msg: O funcionário Maria do Carmo tem um salário de R$1850,45 em Junho.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_3</title>
+</head>
+<body>
+    
+    <input type="text" id="funcionario">
+    </br>
+    <button onclick="exibirsalario()">Clique Aqui</button>
+
+    <script>
+        function exibirsalario(){
+            var funcionario = document.getElementById("funcionario").value;
+            var salario = 1850.45;
+            alert("O funcionário " + funcionario + " tem um salário de R$" + salario + " em Junho.");
+        }
+        // console.log
+    </script>
+</body>
+</html>
