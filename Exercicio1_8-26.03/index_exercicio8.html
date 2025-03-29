@@ -1,0 +1,39 @@
+<!-- 8) Desenvolva um programa que leia uma distância em metros e mostre os valores relativos em outras medidas. 
+Ex: 
+Digite uma distância em metros: 185.72 
+Msg: A distância de 85.7m corresponde a: 0.18572Km, 1.8572Hm, 18.572Dam, 1857.2m, 18572.0cm, 185720.0mm; -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_8</title>
+</head>
+<body>
+    <input type="text" id="metro">
+    </br>
+    <button onclick="leiadistancia()">Clique Aqui</button>
+
+    <script>
+        function leiadistancia(){
+            var metro = document.getElementById("metro").value;
+            var dam = metro / 10;
+            var hm = dam / 10;
+            var km = hm / 10;
+            var dm = metro * 10;
+            var cm = dm * 10;
+            var mm = cm * 10;
+            alert(`A distância de ${metro}m corresponde a: ${km}km, ${hm}hm, ${dam}dam, ${dm}dm, ${metro}M, ${cm}cm, ${mm}mm.`);
+        }
+    </script>
+</body>
+</html>
+
+// metro = valor escolhido
+dam = metro / 10;
+hm = dam / 10;
+km = hm / 10;
+dm = metro * 10;
+cm = dm * 10;
+mm = cm * 10;

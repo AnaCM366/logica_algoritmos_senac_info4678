@@ -1,0 +1,33 @@
+<!-- 9) Faça um algoritmo que o usuário irá digitar o quanto dinheiro uma pessoa tem na carteira (em R$) e mostre quantos dólares ela pode comprar. 
+Considere US$1,00 = R$5,76.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="reais">
+    </br>
+    <button onclick="conversao()">Clique Aqui</button>
+
+    <script>
+        function conversao(){
+            var reais = document.getElementById("reais").value;
+            var baseDolar = 1 / 5.76; 
+            var dolar = reais * baseDolar;
+            alert(dolar);
+        }
+
+        
+        // var dolar = reais / 5.76;
+        
+        
+        
+
+    </script>
+</body>
+</html>
+
