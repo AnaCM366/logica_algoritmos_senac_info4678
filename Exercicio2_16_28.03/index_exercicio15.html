@@ -1,0 +1,27 @@
+<!-- 15) Crie um programa que o usuário irá digitar o número de dias trabalhados em um mês e 
+mostre o salário de um  funcionário, sabendo que ele trabalha 8 horas por dia e 
+ganha R$25 por hora trabalhada.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_15</title>
+</head>
+<body>
+    <input type="text" id="numdias">
+    </br>
+    <button onclick="calsalario()">Clique Aqui</button>
+
+    <script>
+        function calsalario(){
+            var numdias = document.getElementById("numdias").value;
+            var horasdia = 8;
+            var porhoras = 25;
+            var salariofinal = numdias * horasdia * porhoras;
+            alert(`Esse funcionário trabalhou ${numdias} dias e receberá o salário de R$${salariofinal}`);
+        }
+    </script>
+</body>
+</html>

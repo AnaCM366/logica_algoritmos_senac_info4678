@@ -1,0 +1,26 @@
+<!-- 12) Crie um programa que o usuário irá digitar o preço de um produto, calcule 
+e mostre o seu PREÇO PROMOCIONAL, com 5% de desconto.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_12</title>
+</head>
+<body>
+    <input type="text" id="produto">
+    </br>
+    <button onclick="promocional()">Clique Aqui</button>
+
+    <script>
+        function promocional(){
+            var produto = document.getElementById("produto").value;
+            var promocao = 5;
+            var desconto = produto * promocao / 100;
+            var valorpagar = produto - desconto;
+            alert(`O valor a ser pago com o desconto de 5% é de R$${valorpagar}`);
+        }
+    </script>
+</body>
+</html>

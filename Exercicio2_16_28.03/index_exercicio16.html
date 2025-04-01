@@ -1,0 +1,36 @@
+<!-- 16) [DESAFIO] Escreva um programa para calcular a redução do tempo de vida de um fumante. 
+O usuário irá digitar a quantidade de cigarros fumados por dias e quantos anos ele já fumou. 
+Considere que um fumante perde 10 min de vida a cada cigarro. 
+Calcule quantos dias de vida um fumante perderá e exiba o total em dias. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_16</title>
+</head>
+<body>
+    <input type="text" id="cigpordia">
+    </br>
+    <input type="" id="ciganos">
+    </br>
+    <button onclick="reducaotempo()">Clique Aqui</button>
+
+    <script>
+        function reducaotempo(){
+            var cigpordia = document.getElementById("cigpordia").value; 6
+            var ciganos = document.getElementById("ciganos").value;
+            //minutos por cigarro
+            var cigarro = 10; //60 min
+            //quantidade em minutos totais perdidos
+            var minutosPerdidos = cigpordia * cigarro; //quantidade de minutos por dias fumados
+            //transformando minutos em dias
+            var diasperdidos = minutosPerdidos / 1440; //24horas*60minutos
+            //
+            var perdido = diasperdidos * 
+            alert(`O fumante perdeu cerca de ${perdido} dias de vida, devido ao uso do cigarro.`);
+        }
+    </script>
+</body>
+</html>

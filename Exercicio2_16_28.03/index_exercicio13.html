@@ -1,0 +1,26 @@
+<!-- 13) Faça um algoritmo que o usuário irá digitar o salário de um funcionário, calcule 
+e mostre o seu novo salário, com 15% de aumento.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_13</title>
+</head>
+<body>
+    <input type="text" id="salario">
+    </br>
+    <button onclick="salfun()">Clique Aqui</button>
+
+    <script>
+        function salfun(){
+            var salario = document.getElementById("salario").value;
+            var aumento = 15;
+            var aumsalario = salario * aumento / 100;
+            var novosalario = Number(salario) + Number(aumsalario);
+            alert(`O valor do novo salário com o aumento de 15% é de R$${novosalario}`);
+        }
+    </script>
+</body>
+</html>

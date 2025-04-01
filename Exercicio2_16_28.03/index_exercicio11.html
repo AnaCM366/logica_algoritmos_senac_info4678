@@ -1,0 +1,32 @@
+<!-- 11) Desenvolva uma lógica que o usuário irá digitar os valores de A, B e 
+C de uma equação do segundo grau e mostre o valor de Delta.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio_11</title>
+</head>
+<body>
+    <input type="text" id="a">
+    </br>
+    <input type="text" id="b">
+    </br>
+    <input type="text" id="c">
+    </br>
+    <button onclick="valorabc()">Clique Aqui</button>
+
+    <script>
+        function valorabc(){
+            var b = document.getElementById("b").value;
+            var b2 = b * b;
+            var a = document.getElementById("a").value;
+            var c = document.getElementById("c").value;
+            var delta = (b2 - 4) *(a * c);
+            alert(`O valor de delta é ${delta}.`);
+        }
+    </script>
+
+</body>
+</html>

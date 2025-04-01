@@ -1,0 +1,31 @@
+<!-- 14) A locadora de carros precisa da sua ajuda para cobrar seus serviços. 
+Escreva um programa que o usuário irá digitar a quantidade de Km percorridos por um carro 
+alugado e a quantidade de dias pelos quais ele foi alugado. 
+Calcule o preço total a pagar, sabendo que o carro custa R$90 por dia e R$0,20 por Km rodado.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercico_14</title>
+</head>
+<body>
+    <input type="text" id="kmpercorridos">
+    </br>
+    <input type="text" id="quantdias">
+    </br>
+    <button onclick="totalpagar()">Clique Aqui</button>
+
+    <script>
+        function totalpagar(){
+            var kmpercorridos = document.getElementById("kmpercorridos").value;
+            var quantdias = document.getElementById("quantdias").value;
+            var pordias = 90;
+            var porkm = 0.20;
+            var pagaremos = Number(kmpercorridos * porkm) + Number(quantdias * pordias);
+            alert(`O preço total a se pagar é de R$${pagaremos}`);
+        }
+    </script>
+</body>
+</html>

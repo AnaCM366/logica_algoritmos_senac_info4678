@@ -7,20 +7,24 @@ serviço, sabendo que cada litro de tinta pinta uma área de 2metros quadrados. 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercicio_10</title>
 </head>
 <body>
-    <input type="text" id="">
+    <input type="text" id="largura">
+    </br>
+    <input type="text" id="altura">
     </br>
     <button onclick="digitela()">Clique Aqui</button>
 
     <script>
         function digitela(){
-            var largura = document.getElementById("largura");
-            var altura = document.getElementById("altura");
+            //TODO AJUSTAR AQUI // erro era na tinta, em vez de dividir estava multiplicando
+            var largura = document.getElementById("largura").value;
+            var altura = document.getElementById("altura").value;
             var area = largura * altura;
-            var litro = 1 * 2 metros;
-            var tinta = area * 
+            var litro = 2;
+            var tinta = area / litro;
+            alert(`A área a ser pintada é de ${area}, e a quantidade de tinta necessária será de ${tinta} litros.`);
         }
     </script>
 </body>
