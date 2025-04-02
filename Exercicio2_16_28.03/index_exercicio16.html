@@ -19,17 +19,14 @@ Calcule quantos dias de vida um fumante perderá e exiba o total em dias. -->
 
     <script>
         function reducaotempo(){
-            var cigpordia = document.getElementById("cigpordia").value; 6
+            var cigpordia = document.getElementById("cigpordia").value; 
             var ciganos = document.getElementById("ciganos").value;
-            //minutos por cigarro
-            var cigarro = 10; //60 min
-            //quantidade em minutos totais perdidos
+            var cigarro = 10;             //minutos por cigarro
             var minutosPerdidos = cigpordia * cigarro; //quantidade de minutos por dias fumados
-            //transformando minutos em dias
-            var diasperdidos = minutosPerdidos / 1440; //24horas*60minutos
-            //
-            var perdido = diasperdidos * 
-            alert(`O fumante perdeu cerca de ${perdido} dias de vida, devido ao uso do cigarro.`);
+            var anosperdidos = Number(365 * minutosPerdidos) * Number(ciganos);
+            var diasTotaisPerdidos = (anosperdidos / 60) / 24;
+            var duascasas = (diasTotaisPerdidos.toFixed(2));
+            alert(`O fumante perdeu cerca de ${duascasas} dias de vida, devido ao uso do cigarro.`);
         }
     </script>
 </body>
