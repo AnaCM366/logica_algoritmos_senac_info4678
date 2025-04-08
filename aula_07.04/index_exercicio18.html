@@ -1,0 +1,27 @@
+<!-- 18) Faça um programa que leia o ano de nascimento de uma pessoa, calcule a idade dela 
+e depois mostre se ela pode ou não votar.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 18</title>
+</head>
+<body>
+    <input type="text" id="ano" value="">
+    <button onclick="leiaOAno()">Clique Aqui</button>
+
+    <script>
+        function leiaOAno(){
+            let ano = Number(document.getElementById("ano").value);
+            let idade = 2025 - ano;
+
+            if(idade > 15){
+                alert(`Você possui ${idade}, portanto você pode votar.`);
+            }else{
+            alert(`Você não pode votar.`)
+            }
+        }
+    </script>
+</body>
+</html>
