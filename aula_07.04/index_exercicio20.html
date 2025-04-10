@@ -7,6 +7,36 @@
     <title>Exercicio 20</title>
  </head>
  <body>
-    
+    <input type="text" id="numeroInteiro">
+    </br><button onclick="parImpar()">Clique Aqui</button>
+
+    <script>
+      function parImpar(){
+         var numeroInteiro = document.getElementById("numeroInteiro").value;
+         
+         if(numeroInteiro % 2 == 0){
+            alert(`O número ${numeroInteiro} é par.`);
+         }else{
+            alert(`O número ${numeroInteiro} é ímpar.`)
+         }
+      }
+    </script>
  </body>
  </html>
+ 
+<!-- 
+ Outra forma de solução segue abaixo:
+
+ <script>
+   function exibeDados(){
+      var nota = Number(document.getElementById("nota").value);
+      var dividido = nota /2;
+      var inteiro = Math.floor(dividido);
+
+      if(dividido === inteiro){
+         alert(nota + "é Par");
+      }else{
+         alert(nota + "é Ímpar")
+      }
+   }
+ </script> -->

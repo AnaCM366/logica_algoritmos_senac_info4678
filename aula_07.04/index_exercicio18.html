@@ -13,8 +13,8 @@ e depois mostre se ela pode ou não votar.  -->
 
     <script>
         function leiaOAno(){
-            let ano = Number(document.getElementById("ano").value);
-            let idade = 2025 - ano;
+            var ano = Number(document.getElementById("ano").value);
+            var idade = 2025 - ano;
 
             if(idade > 15){
                 alert(`Você possui ${idade}, portanto você pode votar.`);

@@ -1,0 +1,40 @@
+<!-- 21) Faça um algoritmo que leia um determinado ano e mostre se ele é ou não BISSEXTO.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 21</title>
+</head>
+<body>
+    <input type="text" id="ano1"></br>
+    <button onclick="bissexto()">Clique Aqui</button>
+
+<script>
+    function bissexto(){
+        var ano1 = document.getElementById("ano1").value;
+
+        if(ano1 % 4 == 0)
+        if(ano1 % 100 != 0){
+            alert(`O ano ${ano1} é bissexto.`);
+        }else{
+            alert(`O ano ${ano1} não é bissexto.`)
+        }
+    }
+</script>
+</body>
+</html>
+
+<!--  A função abaixo funciona, porém ao colocar o número 100, mostra que é um ano bissexto.
+Porém, o ano 100 não é bissexto, por isso a função correta escrita é a que está acima.
+<script>
+    function bissexto(){
+        var ano1 = document.getElementById("ano1").value;
+
+        if(ano1 % 4 == 0){
+            alert(`O ano ${ano1} é bissexto.`);
+        }else{
+            alert(`O ano ${ano1} não é bissexto.`)
+        }
+    }
+</script> -->

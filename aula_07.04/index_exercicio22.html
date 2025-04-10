@@ -1,0 +1,31 @@
+<!-- 22) Escreva um programa que leia o ano de nascimento de um rapaz e mostre a sua 
+situação em relação ao alistamento militar. - Se estiver antes dos 18 anos, mostre 
+em quantos anos faltam para o alistamento. 
+- Se já tiver depois dos 18 anos, mostre quantos anos já se passaram do alistamento.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 22</title>
+</head>
+<body>
+    <input type="text" id="anoNascimento"></br>
+    <button onclick="alistamento()">Clique Aqui</button>
+
+    <script>
+        function alistamento(){
+            var dataNascimento = document.getElementById("anoNascimento").value;
+            var anosAtuais = 2025 - dataNascimento;
+            var anosQuePassaram = anosAtuais - 18;
+            var anosQueFaltam = 18 - anosAtuais;
+
+            if(anosAtuais > 17){
+                alert(`Se passaram ${anosQuePassaram} anos desde o alistamento.`);
+            }else{
+                alert(`Faltam ${anosQueFaltam} anos para o alistamento.`)
+            }
+        }
+    </script>
+</body>
+</html>
