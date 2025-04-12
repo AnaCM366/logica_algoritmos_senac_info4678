@@ -1,0 +1,29 @@
+<!-- 24) Faça um algoritmo que pergunte a distância que um passageiro deseja percorrer em Km. 
+Calcule o preço da passagem, cobrando R$0.50 por Km para viagens até 200Km e R$0.45 
+para viagens mais longas.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 24</title>
+</head>
+<body>
+    <input type="number" id="distanciaKM" placeholder="Informe a distância a ser percorrida"></br>
+    <button onclick="quantoDesejaPercorrer()">Clique Aqui</button>
+
+    <script>
+        function quantoDesejaPercorrer(){
+            var quantKM = document.getElementById("distanciaKM").value;
+            var ate200 = Number(quantKM) * Number(0.50);
+            var alem = Number(quantKM) * Number(0.45);
+            
+            if(quantKM <= 200){
+                alert(`O valor da passagem é de R$${ate200}.`);
+            }else{
+                alert(`O valor da passagem é de R$${alem}.`)
+            }
+        }
+    </script>
+</body>
+</html>
