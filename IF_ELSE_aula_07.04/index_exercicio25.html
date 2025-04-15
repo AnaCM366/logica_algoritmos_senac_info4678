@@ -20,11 +20,25 @@ ser menor que a soma dos outros dois. -->
         var reta1 = document.getElementById("reta1").value;
         var reta2 = document.getElementById("reta2").value;
         var reta3 = document.getElementById("reta3").value;
+        var valor1 = reta2 + reta3;
+        var valor2 = reta1 + reta3;
+        var valor3 = reta1 + reta2;
 
-        if(){
-            alert(``)
+        if(valor1 > reta1)
+        {
+            if(valor2 > reta2)
+            {
+                if(valor3 > reta3)
+                {
+                    alert(`Os valores informados formam um triângulo.`);
+                }else{
+                    alert(`Os valores informados não formam um triângulo.`);
+                }
+            }else{
+                alert(`Os valores informados não formam um triângulo.`);
+            }
         }else{
-            alert(``)
+            alert(`Os valores informados não formam um triângulo.`);
         }
     }
     </script>

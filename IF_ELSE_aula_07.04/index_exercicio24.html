@@ -14,13 +14,12 @@ para viagens mais longas.  -->
 
     <script>
         function quantoDesejaPercorrer(){
-            var quantKM = document.getElementById("distanciaKM").value;
-            var ate200 = Number(quantKM) * Number(0.50);
-            var alem = Number(quantKM) * Number(0.45);
-            
+            var quantKM = document.getElementById("distanciaKM").value;            
             if(quantKM <= 200){
+                var ate200 = Number(quantKM) * Number(0.50);
                 alert(`O valor da passagem é de R$${ate200}.`);
             }else{
+                var alem = Number(quantKM) * Number(0.45);
                 alert(`O valor da passagem é de R$${alem}.`)
             }
         }

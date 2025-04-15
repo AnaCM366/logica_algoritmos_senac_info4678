@@ -19,12 +19,12 @@ Sabendo que: - Homens ganham 5% de desconto - Mulheres ganham 13% de desconto  -
         function diaDaMulher(){
             var nomePessoa = document.getElementById("nomePessoa").value;
             var sexo1 = document.getElementById("sexo1").value;
-            var valorDasCompras = document.getElementById("valorDasCompras").value;
+            var valorDasCompras = Number(document.getElementById("valorDasCompras").value);
             var homens = 5;
             var mulheres = 13;
 
-            var descontoHomens = Number(valorDasCompras) - (valorDasCompras * homens / 100);
-            var descontoMulheres = Number(valorDasCompras) - (valorDasCompras * mulheres / 100);
+            var descontoHomens = (valorDasCompras) - (valorDasCompras * homens / 100);
+            var descontoMulheres = (valorDasCompras) - (valorDasCompras * mulheres / 100);
 
             if(sexo1 == "Feminino"){
                 alert(`${nomePessoa}, você é do sexo Feminino, o valor total das compras é de R$${valorDasCompras}. Você recebeu um desconto de 13%, portanto o valor a ser pago é de R$${descontoMulheres}.`);
