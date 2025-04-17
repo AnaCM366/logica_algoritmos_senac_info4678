@@ -13,14 +13,17 @@
 <script>
     function bissexto(){
         var ano1 = document.getElementById("ano1").value;
-        if(ano1 % 400 === 0){
-            alert(`O ano ${ano1} é bissexto.`);
-        }else if(ano1 % 100 === 0){
-            alert(`O ano ${ano1} não é bissexto.`);
-        }else if(ano1 % 4 === 0){
-            alert(`O ano ${ano1} é bissexto.`);
-        }else{
-            alert(`O ano ${ano1} não é bissexto.`)
+        if(ano1 % 4 == 0)
+        {
+            if(ano1 % 100 == 0)
+            {
+                if(ano1 % 400 == 0)
+                {
+                alert(`O ano ${ano1} é bissexto.`);
+                }else {
+                alert(`O ano ${ano1} não é bissexto.`)
+                }
+            }
         }
     }
 </script>
