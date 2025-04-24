@@ -1,0 +1,34 @@
+<!-- 26) Escreva um algoritmo que leia dois números inteiros e compare-os, 
+ mostrando na tela uma das mensagens abaixo: 
+- O primeiro valor é o maior 
+- O segundo valor é o maior 
+- Não existe valor maior, os dois são iguais  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 26</title>
+</head>
+<body>
+    <input type="number" id="umNumeroInteiro" placeholder="Digite um número"></br>
+    <input type="number" id="doisNumeroInteiro" placeholder="Digite um número"></br>
+    <button onclick="comparacao()">Clique Aqui</button>
+
+    <script>
+        function comparacao(){
+            var umNumeroInteiro = document.getElementById("umNumeroInteiro").value;
+            var doisNumeroInteiro = document.getElementById("doisNumeroInteiro").value;
+
+            if(umNumeroInteiro > doisNumeroInteiro && umNumeroInteiro !== doisNumeroInteiro){
+                alert(`O primeiro valor é o maior.`);
+            }else if(doisNumeroInteiro > umNumeroInteiro && doisNumeroInteiro !== umNumeroInteiro){
+                alert(`O segundo valor é o maior.`);
+            }else{
+                alert(`Não existe valor maior, os dois são iguais.`);
+            }
+        }
+    </script>
+</body>
+</html>

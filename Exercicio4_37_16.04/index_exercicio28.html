@@ -1,0 +1,35 @@
+<!-- 28) Faça um programa que leia a largura e o comprimento de um terreno retangular, 
+calculando e mostrando a sua área em m². O programa também devemostrar a classificação 
+desse terreno, de acordo com a lista abaixo: 
+- Abaixo de 100m² = TERRENO POPULAR 
+- Entre 100m² e 500m² = TERRENO MASTER 
+- Acima de 500m² = TERRENO VIP  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 28</title>
+</head>
+<body>
+    <input type="number" id="largura1" placeholder="Digite a largura"></br>
+    <input type="number" id="comprimento1" placeholder="Digite o comprimento"></br>
+    <button onclick="leiaLarguraEComprimento()">Clique Aqui</button>
+
+    <script>
+        function leiaLarguraEComprimento(){
+            var largura1 = Number(document.getElementById("largura1").value);
+            var comprimento1 = Number(document.getElementById("comprimento1").value);
+            var areaQuadrado = largura1 * comprimento1;
+
+            if(areaQuadrado < 100){
+                alert(`Área ao quadrado: ${areaQuadrado}m². É um Terreno Popular.`);
+            }else if(areaQuadrado >= 100 && areaQuadrado <= 500){
+                alert(`Área ao quadrado: ${areaQuadrado}m². É um Terreno Master.`);
+            }else if(areaQuadrado > 500){
+                alert(`Área ao quadrado: ${areaQuadrado}m². É um Terreno Vip.`);
+            }
+        }
+    </script>
+</body>
+</html>

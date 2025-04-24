@@ -1,0 +1,34 @@
+<!-- 27) Crie um programa que leia duas notas de um aluno e calcule a sua média, 
+mostrando uma mensagem no final, de acordo com a média atingida: 
+- Média até 4.9: REPROVADO 
+- Média entre 5.0 e 6.9: RECUPERAÇÃO 
+- Média 7.0 ou superior: APROVADO  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 27</title>
+</head>
+<body>
+    <input type="number" id="primeiraNotaDeUmAluno" placeholder="Digite a nota"></br>
+    <input type="number" id="segundaNotaDeUmAluno" placeholder="Digite a nota"></br>
+    <button onclick="calculeAMedia()">Clique Aqui</button>
+
+    <script>
+        function calculeAMedia(){
+            var primeirNotaDeUmAluno = Number(document.getElementById("primeiraNotaDeUmAluno").value);
+            var segundaNotaDeUmAluno = Number(document.getElementById("segundaNotaDeUmAluno").value);
+            var resultadoMedia = (primeirNotaDeUmAluno + segundaNotaDeUmAluno) / 2;
+
+            if(resultadoMedia < 5){
+                alert(`A média do aluno é de ${resultadoMedia}, portanto ele está reprovado.`);
+            }else if(resultadoMedia >= 5 && resultadoMedia <= 6.9){
+                alert(`A média do aluno é de ${resultadoMedia}, portando ele está em recuperação.`);
+            }else if(resultadoMedia >= 7){
+                alert(`A média do aluno é de ${resultadoMedia}, portanto ele está aprovado.`);
+            }
+        }
+    </script>
+</body>
+</html>

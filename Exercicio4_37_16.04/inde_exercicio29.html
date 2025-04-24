@@ -1,0 +1,42 @@
+<!-- 29) Desenvolva um programa que leia o nome de um funcionário, seu salário, 
+quantos anos ele trabalha na empresa e mostre seu novo salário, reajustado de 
+acordo com a tabela a seguir: 
+- Até 3 anos de empresa: aumento de 3% 
+- entre 3 e 10 anos: aumento de 12.5% 
+- 10 anos ou mais: aumento de 20% 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 29</title>
+</head>
+<body>
+    <input type="text" id="nomeFuncionario" placeholder="Digite seu nome"></br>
+    <input type="number" id="salarioFuncionario" placeholder="Digite seu salário"></br>
+    <input type="number" id="anosDeEmpresa" placeholder="Digite anos de trabal. empresa"></br>
+    <button onclick="leiaAsInformacoesDeUmFuncionario()">Clique Aqui</button>
+
+    <script>
+        function leiaAsInformacoesDeUmFuncionario(){
+            var nomeFuncionario = document.getElementById("nomeFuncionario").value;
+            var salarioFuncionario = Number(document.getElementById("salarioFuncionario").value);
+            var anosDeEmpresa = Number(document.getElementById("anosDeEmpresa").value);
+
+            if(anosDeEmpresa < 3){
+                var ate3AnosDeEmpresa = (salarioFuncionario * 3) / 100;
+                alert(`${nomeFuncionario}, com ${anosDeEmpresa} anos de empresa, seu novo salário será R$${ate3AnosDeEmpresa}.`);
+            }
+            else if(anosDeEmpresa >= 3 && anosDeEmpresa <= 10){
+                var entre3E10Anos = (salarioFuncionario * 12.5) / 100;
+                alert(`${nomeFuncionario}, com ${anosDeEmpresa} anos de empresa, seu novo salário será R$${entre3E10Anos}.`);
+            }
+            else if(anosDeEmpresa > 10){
+                var dezAnosOuMais = (salarioFuncionario * 20) / 100;
+                alert(`${nomeFuncionario}, com ${anosDeEmpresa} anso de empresa, seu novo sala´rio será R$${dezAnosOuMais}.`);
+            }
+        }
+    </script>
+</body>
+</html>
