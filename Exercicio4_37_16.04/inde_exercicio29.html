@@ -25,16 +25,16 @@ acordo com a tabela a seguir:
             var anosDeEmpresa = Number(document.getElementById("anosDeEmpresa").value);
 
             if(anosDeEmpresa < 3){
-                var ate3AnosDeEmpresa = (salarioFuncionario * 3) / 100;
+                var ate3AnosDeEmpresa = salarioFuncionario + (salarioFuncionario * 3) / 100;
                 alert(`${nomeFuncionario}, com ${anosDeEmpresa} anos de empresa, seu novo salário será R$${ate3AnosDeEmpresa}.`);
             }
             else if(anosDeEmpresa >= 3 && anosDeEmpresa <= 10){
-                var entre3E10Anos = (salarioFuncionario * 12.5) / 100;
+                var entre3E10Anos = salarioFuncionario + (salarioFuncionario * 12.5) / 100;
                 alert(`${nomeFuncionario}, com ${anosDeEmpresa} anos de empresa, seu novo salário será R$${entre3E10Anos}.`);
             }
             else if(anosDeEmpresa > 10){
-                var dezAnosOuMais = (salarioFuncionario * 20) / 100;
-                alert(`${nomeFuncionario}, com ${anosDeEmpresa} anso de empresa, seu novo sala´rio será R$${dezAnosOuMais}.`);
+                var dezAnosOuMais = salarioFuncionario + (salarioFuncionario * 20) / 100;
+                alert(`${nomeFuncionario}, com ${anosDeEmpresa} anso de empresa, seu novo salário será R$${dezAnosOuMais}.`);
             }
         }
     </script>

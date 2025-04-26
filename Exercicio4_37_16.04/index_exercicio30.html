@@ -1,0 +1,36 @@
+<!-- 30) [DESAFIO] Refaça o algoritmo 25, acrescentando o recurso de mostrar que 
+ tipo de triângulo será formado: 
+- EQUILÁTERO: todos os lados iguais 
+- ISÓSCELES: dois lados iguais 
+- ESCALENO: todos os lados diferentes  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 30</title>
+</head>
+<body>
+    <input type="number" id="primeiroValor" placeholder="Digite um valor"></br>
+    <input type="number" id="segundoValor" placeholder="Digite um valor"></br>
+    <input type="number" id="terceiroValor" placeholder="Digite um valor"></br>
+    <button onclick="tipoDeTriângulo()">Clique Aqui</button>
+
+    <script>
+        function tipoDeTriângulo(){
+            var primeiroValor = document.getElementById("primeiroValor").value;
+            var segundoValor = document.getElementById("segundoValor").value;
+            var terceiroValor = document.getElementById("terceiroValor").value;
+
+            if(primeiroValor == segundoValor == terceiroValor){
+                alert(`É um Equilátero.`);
+            }else if(primeiroValor == segundoValor || segundoValor == terceiroValor || terceiroValor == primeiroValor){
+                alert(`É um Isósceles.`);
+            }else{
+                alert(`É um Escaleno.`);
+            }
+        }
+    </script>
+</body>
+</html>
