@@ -7,12 +7,52 @@
     <title>Exercicio 31</title>
  </head>
  <body>
-    <input type="text" id=""></br>
-    <input type="" id=""></br>
-    <button onclick="">Clique Aqui</button>
+   <h1>JoKenPo - Escolha uma opção:</h1>
+    <input type="radio" id="pedra" value="pedra">Pedra</br>
+    <input type="radio" id="papel" value="papel">Papel</br>
+    <input type="radio" id="tesoura" value="tesoura">Tesoura</br>
+
+    <button onclick="jogar()">Jogar</button>
 
     <script>
-        function 
+        function jogar(){
+         var jogador = "";
+
+         if(document.getElementById(`pedra`).checked){
+            jogador = `pedra`;
+         }else if(document.getElementById(`papel`).checked){
+            jogador = `papel`;
+         }else if(document.getElementById(`tesoura`).checked){
+            jogador = `tesoura`;
+         }else{
+            alert(`Escolha pedra, papel ou tesoura!`);
+            return;
+         }
+
+      var escolhas = ["pedra", "papel", "tesoura"];
+      var computador = escolhas[Math.floor(Math.random() * 3)];
+      alert(`O computador escolheu ${computador}`);
+
+      var resultado = "";
+
+      if(jogar === computador){
+         resultado = `Empate!`;
+      }else if(
+         (jogador === `pedra` && computador === `tesoura`) ||
+         (jogador === `papel` && computador === `pedra`) ||
+         (jogador === `tesoura` && computador === `papel`)
+      ){
+         resultado = `Você venceu!`;
+      }else {
+         resultado = `Você perdeu!`;
+      }
+
+      alert(resultado);
+
+      document.getElementById(`pedra`).checked = false;
+      document.getElementById(`papel`).checked = false;
+      document.getElementById(`tesoura`).checked = false;
+   }
     </script>
  </body>
  </html>
