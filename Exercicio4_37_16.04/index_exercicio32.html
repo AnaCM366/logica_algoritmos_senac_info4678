@@ -1,21 +1,28 @@
 <!-- 32) [DESAFIO] Crie um jogo onde o computador vai sortear um número entre 
 1 e 5 o jogador vai tentar descobrir qual foi o valor sorteado.  -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio 32</title>
 </head>
 <body>
-    <h1>Advinhe o número</h1>
-    <p>Escolha um número entre 1 e 5.<p>
-    <input type="" id=""></br>
+    <h1>Advinhe o número!</h1>
+    <p>Escolha um número entre 1 e 5.</p>
+    <input type="number" min="1" max="5" id="palpite"></br>
     <button onclick="sortear()">Jogue</button>
 
     <script>
-        function sortear(){
+        function sortear() {
+            var palpite = Number(document.getElementById("palpite").value);
+            var numeroSorteado = Math.floor(Math.random() * 5) + 1;
 
+            if (palpite === numeroSorteado) {
+                alert(`Parabéns, você acertou o número!`);
+            } else {
+                alert(`Você errou, o número era ${numeroSorteado}, tente novamente!`);
+            }
         }
     </script>
 </body>
