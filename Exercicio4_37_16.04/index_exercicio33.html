@@ -1,0 +1,40 @@
+<!-- 33) Escreva um programa para aprovar ou não o empréstimo bancário para a compra de uma casa. 
+O programa vai perguntar o valor da casa, o salário do comprador e em quantos anos ele vai pagar. 
+Calcule o valor da prestação mensal, sabendo que ela não pode exceder 30% do salário ou então o 
+empréstimo será negado.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 33</title>
+</head>
+<body>
+    <h1>Empréstimo Bancário</h1>
+    <P>Preencha com suas informações abaixo com as seguintes informações, para que possamos realizar o calculo do valor da prestação mensal:
+        O valor da casa.
+        O salário.
+        Em até quantos anos irá pagar?
+    </P>
+    <input type="number" id="oValorDaCasa">
+    <input type="number" id="salarioBase">
+    <input type="number" id="quantosAnos">
+    <button onclick="oValorDaPrestacaoMensal()">Calcule</button>
+
+    <script>
+        function oValorDaPrestacaoMensal(){
+            var oValorDaCasa = Number(document.getElementById("oValorDaCasa").value);
+            var salarioBase = Number(document.getElementById("salarioBase").value);
+            var quantosAnos = Number(document.getElementById("quantosAnos").value);
+            var prestacaoMensal = oValorDaCasa / (quantosAnos * 12);
+            var calcular30PorCentoDoSalario = salarioBase * 30;
+
+            if(prestacaoMensal <= calcular30PorCentoDoSalario){
+                alert(`Seu empréstimo foi aprovado! O valor da prestação mensal será de ${calcular30PorCentoDoSalario}.`);
+            }else{
+                alert(`Seu empréstimo foi negado!`);
+            }
+        }
+    </script>
+</body>
+</html>
