@@ -1,12 +1,12 @@
 <!-- 34) O Índice de Massa Corpórea (IMC) é um valor calculado baseado na altura e no peso de 
 uma pessoa. De acordo com o valor do IMC, podemos classificar o indivíduo dentro de certas 
 faixas. 
-- abaixo de 18.5: Abaixo do peso 
-- entre 18.5 e 25: Peso ideal 
-- entre 25 e 30: Sobrepeso
-- entre 30 e 40: Obesidade 
-- acima de 40: Obseidade mórbida Obs: O IMC é calculado pela expressão peso/altura² 
-(peso dividido pelo quadrado da altura)  -->
+- abaixo de 18.5: Abaixo do peso **
+- entre 18.5 e 25: Peso ideal **
+- entre 25 e 30: Sobrepeso **
+- entre 30 e 40: Obesidade **
+- acima de 40: Obseidade mórbida 
+Obs: O IMC é calculado pela expressão peso/altura² (peso dividido pelo quadrado da altura)  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +15,30 @@ faixas.
     <title>Exercicio 34</title>
 </head>
 <body>
-    <input>
-    
+    <h1>Calcule seu Índice de Massa Corpórea (IMC)</h1>
+    <p>Informe sua altura e o seu peso.</p>
+    <input type="number" id="informeSuaAltura"></br>
+    <input type="number" id="informeSeuPeso"></br>
+    <button onclick="calcularOIMC()">Clique para Calcular</button>
+
+    <script>
+        function calcularOIMC(){
+            var informeSuaAltura = Number(document.getElementById("informeSuaAltura").value);
+            var informeSeuPeso = Number(document.getElementById("informeSeuPeso").value);
+            var calcularIMC = informeSeuPeso / (informeSuaAltura * informeSuaAltura);
+
+            if(calcularIMC < 18.5){
+                alert(`Você está abaixo do peso.`);
+            }else if(calcularIMC >= 18.5 && calcularIMC < 25){
+                alert(`Você está com o peso ideal.`);
+            }else if(calcularIMC >= 25 && calcularIMC < 30){
+                alert(`Você está com sobrepeso.`);
+            }else if(calcularIMC >= 30 && calcularIMC < 40){
+                alert(`Você está com obesidade.`);
+            }else if(calcularIMC >= 40){
+                alert(`Você está com obesidade mórbida.`);
+            }
+        }
+    </script>
 </body>
 </html>
