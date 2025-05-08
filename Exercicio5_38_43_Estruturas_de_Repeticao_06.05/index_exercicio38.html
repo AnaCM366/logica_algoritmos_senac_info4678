@@ -1,0 +1,26 @@
+<!-- 38) Escreva um programa que mostre na tela a seguinte contagem:
+ 6 7 8 9 10 11 Acabou!  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 38</title>
+</head>
+<body>
+    <h1>Clique no botão para gerar a contagem na tela!</h1>
+    <button onclick="mensagemNaTelaAMensagem()">Contagem</button>
+    <script>
+        function mensagemNaTelaAMensagem(){
+            var i = 6;
+            var resposta = '';
+            while(i <= 11){
+                resposta += i + '';
+                i++;
+            }
+            resposta += `Acabou!`;
+            alert(resposta);
+        }
+    </script>
+</body>
+</html>

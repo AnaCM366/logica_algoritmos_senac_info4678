@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05/05 - Estruturas de Repetição</title>
+</head>
+<body>
+    <button onclick="funcaoDeRepeticao()">Testar</button>
+    <script>
+        //funcao anonima
+        window.onload = function(){
+
+            //for ([expressaoInicial];[condicao];[incremento])
+            //declaracao
+
+            for(var i = 0; i < 5; i++){
+                console.log(i);
+
+            }
+            var i = 0;
+
+            //while (condicao)
+            //declaracao
+            while(i < 5){
+                console.log(i);
+                i++;
+            }
+        }
+    </script>
+
+    <!-- formas de exibir minha mensagem:
+    alert(i); ao utilizar essa funcao, terei que ficar clicando no botão para o sistema rodar
+
+    console.log(i); já com essa o sistema irá rodar de forma automatizada, sem necessidade de ficar
+    clicando
+
+    utilizando var todosOsNumeros
+    todosOsNumeros = todosOsNumeros + i; com essa funcao aqui ele realiza a soma dos valores
+
+    var i = 0 
+    i ++;           i = i +1 -->
+</body>
+</html>
