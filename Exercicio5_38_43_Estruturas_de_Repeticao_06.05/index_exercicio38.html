@@ -8,18 +8,14 @@
     <title>Exercicio 38</title>
 </head>
 <body>
-    <h1>Clique no botão para gerar a contagem na tela!</h1>
-    <button onclick="mensagemNaTelaAMensagem()">Contagem</button>
-    <script>
-        function mensagemNaTelaAMensagem(){
-            var i = 6;
-            var resposta = '';
-            while(i <= 11){
-                resposta += i + '';
-                i++;
+ <script>
+        window.onload = function(){
+            var mostrarNaTela = "";
+            for(var i = 6; i <= 11; i++){
+                mostrarNaTela = mostrarNaTela + i + " ";
             }
-            resposta += `Acabou!`;
-            alert(resposta);
+            mostrarNaTela += "";
+            console.log(mostrarNaTela + "Acabou!")
         }
     </script>
 </body>

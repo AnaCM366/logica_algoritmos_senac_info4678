@@ -1,0 +1,26 @@
+<!-- 42) Faça um algoritmo que pergunte ao usuário um número inteiro e positivo 
+ qualquer e mostre uma contagem até esse valor: 
+Ex: 
+Digite um valor: 35
+ Contagem: 1 2 3 4 5 6 7 ... 33 34 35 Acabou!  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 42</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var digiteUmValor = prompt("Digite o primeiro valor:");
+            var valor = "";
+            for(var i = 1; i <= digiteUmValor; i++){
+            valor = valor + i + " ";
+            }
+            digiteUmValor += "";
+            console.log(valor + "Acabou!")    
+        }
+    </script>
+</body>
+</html>

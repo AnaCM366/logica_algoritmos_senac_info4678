@@ -1,0 +1,22 @@
+<!-- 41) Desenvolva um programa que mostre na tela a seguinte contagem: 
+100 95 90 85 80 ... 0 Acabou!  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 41</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var mostrarSegmentacao = "";
+            for(var i = 100; i >= 0; i-=10){
+                mostrarSegmentacao = mostrarSegmentacao + i + " ";
+            }
+            mostrarSegmentacao += "";
+            console.log(mostrarSegmentacao + "Acabou!")
+        }
+    </script>
+</body>
+</html>
