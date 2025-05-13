@@ -1,0 +1,28 @@
+<!-- 45) O programa acima vai ter um problema quando digitarmos o primeiro valor maior 
+que o último. Resolva esse problema com um código que funcione em qualquer situação. 
+
+quer colocar um valor maior para um menor (decompor ao contrário)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 45</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var digiteOPrimeiroValor = Number(prompt("Digite o primeiro valor:"));
+            var digiteOSegundoValor = Number(prompt("Digite o segundo valor:"));
+            var resultadoDaExecucao = "";
+            if(digiteOPrimeiroValor > digiteOSegundoValor){
+            }else if(digiteOSegundoValor > digiteOPrimeiroValor){
+            }
+            for(var i = digiteOPrimeiroValor; i >= digiteOSegundoValor; i--){
+                resultadoDaExecucao = resultadoDaExecucao + i + " ";
+            }
+            console.log(resultadoDaExecucao)
+        }
+    </script>
+</body>
+</html>
