@@ -1,0 +1,21 @@
+<!-- 47) Desenvolva um aplicativo que mostre na tela o resultado da expressão 
+500 + 450 + 400 + 350 + 300 + ... + 50 + 0  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 47</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var decomposicaoAoContrario = 0;
+            for(var i = 500; i >= 0; i-=50){
+                decomposicaoAoContrario = decomposicaoAoContrario + i;
+            }
+            console.log(decomposicaoAoContrario)
+        }
+    </script>
+</body>
+</html>

@@ -9,7 +9,13 @@ entre 6 + 8 + 10 + 12 + 14 + ... + 98 + 100.  -->
 </head>
 <body>
     <script>
-        
+        window.onload = function(){
+            var valorQueSomamos = 0; //não irei subtrair nem somar nada de valor
+            for(var i = 6; i <= 100; i+=2){
+                valorQueSomamos = valorQueSomamos + i;
+            }
+            console.log(valorQueSomamos)
+        }
     </script>
 </body>
 </html>

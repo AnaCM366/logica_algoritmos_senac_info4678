@@ -1,0 +1,29 @@
+ <!-- 49) Crie um programa que leia 6 números inteiros e no final mostre quantos 
+ deles são pares e quantos são ímpares.  -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 49</title>
+ </head>
+ <body>
+    <script>
+        window.onload = function(){
+            var par1 = 0;
+            var impar1 = 0;
+            var parEImpar = "";
+            for(var i = 0; i <= 6; i++){
+                var parEImpar = Number(prompt("Digite um número:"))
+                if(parEImpar % 2 == 0){
+                    par1 += 1;
+                }else{
+                    impar1 += 1;
+                }
+            }
+            
+            console.log(`Existem ${par1} de números pares e ${impar1} de números ímpares.`)
+        }
+    </script>
+ </body>
+ </html>
