@@ -1,0 +1,37 @@
+<!-- 50) Desenvolva um programa que faça o sorteio de 20 números entre 0 e 10 e mostre na tela: 
+a) Quais foram os números sorteados 
+b) Quantos números estão acima de 5 
+c) Quantos números são divisíveis por 3  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 50</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var sortear = [];
+            var acimada5 = 0;
+            var divisivel3 = 0;
+            for(var i = 0; i < 20; i++){
+                var numeros = Math.floor(Math.random() * 11);
+                sortear.push(numeros);
+
+                if(numeros > 5){
+                    acimada5++;
+                }
+
+                if(divisivel3 % 3 === 0){
+                    divisivel3++;
+                }
+            }
+
+            console.log(`Números sorteados: ${sortear}.`);
+            console.log(`Quantidade de números acima de 5: ${acimada5}.`);
+            console.log(`Quantidade de números divisíveis por 3: ${divisivel3}.`)
+        }
+    </script>
+</body>
+</html>
