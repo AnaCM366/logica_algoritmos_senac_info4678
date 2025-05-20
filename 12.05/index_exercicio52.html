@@ -1,0 +1,43 @@
+<!-- 52) Crie um algoritmo que leia a idade de 10 pessoas, mostrando no final: 
+a) Qual é a média de idade do grupo 
+b) Quantas pessoas tem mais de 18 anos 
+c) Quantas pessoas tem menos de 5 anos 
+d) Qual foi a maior idade lida  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 52</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var digite10idades = 0;
+            var maiorDe18Anos = 0;
+            var menosDe5Anos = 0;
+            var maiorIdadeLida = 0;
+
+            for(var i = 0; i < 10; i++){
+                var somarIdades = Number(prompt("Digite uma idade:"))  
+                digite10idades+=somarIdades
+
+                if(18 == maiorDe18Anos || digite10idades > maiorDe18Anos){
+                    maiorDe18Anos = digite10idades;
+                }
+                if(4 == menosDe5Anos || digite10idades < menosDe5Anos){
+                    menosDe5Anos = digite10idades;
+                }
+                if(null == maiorIdadeLida || digite10idades > maiorIdadeLida){
+                    maiorIdadeLida = digite10idades;
+                }
+
+                var mediaDas10Idades = somarIdades / 10;
+            }
+            console.log(`A média do grupo ${mediaDas10Idades}, ${maiorDe18Anos} são maiores de 18 anos,
+            ${menosDe5Anos} possuem menos de 5 anos, ${maiorIdadeLida}`)
+
+        }
+    </script>
+</body>
+</html>

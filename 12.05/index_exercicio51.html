@@ -10,9 +10,21 @@ No final, mostre na tela qual foi o maior e qual foi o menor preço digitados.  
 <body>
     <script>
         window.onload = function(){
-            var
-            for()
-            Number(prompt(""))
+            var valorMenor = null;
+            var valorMaior = null;
+            var vamosVerificarONumeroMaiorEOMenor = 0;
+
+            for(var i = 0; i < 8; i++){
+            var vamosVerificarONumeroMaiorEOMenor = Number(prompt("Digite um número:"))
+                if(null == valorMenor || vamosVerificarONumeroMaiorEOMenor < valorMenor){
+                    valorMenor = vamosVerificarONumeroMaiorEOMenor;
+                }
+                
+                if(null == valorMaior || vamosVerificarONumeroMaiorEOMenor > valorMaior){
+                    valorMaior = vamosVerificarONumeroMaiorEOMenor;
+                }
+            }
+            console.log(`O menor valor ${valorMenor} e o meu maior valor é ${valorMaior}.`)
         }
     </script>
 </body>
