@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+
+            var soma = 0;
+            for(var i = 0; i < 1; i++){
+                var valorDigitado = Number(prompt("Digite um valor"))
+                if(valorDigitado != 1111){
+                    soma += valorDigitado;
+                    i--
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+// break encerra o for
+// return
+// continue pula para o incrementador, irá ignorar oq está em baixo, se funcionar a função não irá passar no continue
+// 
