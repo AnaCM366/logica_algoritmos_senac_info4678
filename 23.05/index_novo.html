@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        window.onload = function(){
+            var arraiDeNomes = [];
+            for(var i = 5; i <= 50; i+=5){
+                arraiDeNomes.push(i);
+            }
+            console.log(arraiDeNomes);
+
+            //-------
+            
+            arraiDeNomes = [];
+            var soma = 5;
+            for(var i = 0; i < 10; i++){
+                arraiDeNomes[1] = soma;
+                soma+=5;
+            }
+            console.log(arraiDeNomes);
+        }
+    </script>
+</body>
+</html>
