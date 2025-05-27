@@ -11,10 +11,13 @@ Fibonacci: 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 0 1 2 3 4 5 6 7 8 9 10
 <body>
     <script>
         window.onload = function(){
-            var vetors
-            for(){
-
+            var fibonacci = [];
+            fibonacci[0] = 1;
+            fibonacci[1] = 1;
+            for(var i = 2; i < 16; i++){
+                fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
             }
+            console.log(fibonacci);
         }
     </script>
 </body>
