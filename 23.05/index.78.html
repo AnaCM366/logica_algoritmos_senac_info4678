@@ -12,12 +12,17 @@ múltiplos de 10.  -->
     <script>
         window.onload = function(){
             var leiaOsNumeros = [];
+            var multiplosDeDez = [];
             for(var i = 0; i < 15; i++){
                 var guardarNumeros = Number(prompt("Digite um número"));
-                leiaOsNumeros[0+i] = guardarNumeros;
+                leiaOsNumeros[i] = guardarNumeros;
 
+                if(guardarNumeros % 10 === 0){
+                    multiplosDeDez.push(i);
+                }
             }
             console.log(leiaOsNumeros);
+            console.log(multiplosDeDez)
         }
     </script>
 </body>

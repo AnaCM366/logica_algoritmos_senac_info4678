@@ -1,0 +1,31 @@
+<!-- 79) Desenvolva um programa que leia 10 números inteiros e guarde-os em um vetor. No final, 
+mostre quais são os números pares que foram digitados e em que posições eles estão armazenados. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var leiaDezNumeros = [];
+            var posicaoNumerosPares = [];
+            var mostrarOsNumerosPares = [];
+            for(var i = 0; i < 10; i++){
+                var guardarOsDezNumeros = Number(prompt("Digite um número:"));
+                leiaDezNumeros[i] = guardarOsDezNumeros;
+
+                if(guardarOsDezNumeros % 2 === 0){
+                    posicaoNumerosPares.push(i);
+                    mostrarOsNumerosPares.push(guardarOsDezNumeros);
+                }
+            }
+            console.log(leiaDezNumeros);
+            console.log(posicaoNumerosPares);
+            console.log(mostrarOsNumerosPares);
+        }
+    </script>
+</body>
+</html>

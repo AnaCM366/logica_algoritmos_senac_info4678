@@ -11,21 +11,25 @@
     <button onclick="bissexto()">Clique Aqui</button>
 
 <script>
-    function bissexto(){
-        var ano1 = document.getElementById("ano1").value;
-        if(ano1 % 4 == 0)
-        {
-            if(ano1 % 100 == 0)
-            {
-                if(ano1 % 400 == 0)
-                {
-                alert(`O ano ${ano1} é bissexto.`);
-                }else {
-                alert(`O ano ${ano1} não é bissexto.`)
+        function bissexto(){
+            var ano = Number(document.getElementById("ano1").value);
+            var a = ano1 % 4;
+            var b = ano1 % 100;
+            var c = ano1 % 400;
+            if(a == 0){
+                if(b == 0){
+                    if(c == 0){
+                    alert(ano1 + "é um ano bissexto.");
+                    }else{
+                        alert(ano1 + "não é um ano bissexto.");
+                    }
+                }else{
+                    alert(ano1 + "não é um ano bissexto.");
                 }
+            }else{
+                alert(ano1 + "não é um ano bissexto.")
             }
         }
-    }
 </script>
 </body>
 </html>
@@ -42,4 +46,17 @@ Porém, o ano 100 não é bissexto, por isso a função correta escrita é a que
             alert(`O ano ${ano1} não é bissexto.`)
         }
     }
+conti.
+            var ano1 = document.getElementById("ano1").value;
+        if(ano1 % 4 == 0)
+        {
+            if(ano1 % 100 == 0)
+            {
+                if(ano1 % 400 == 0)
+                {
+                alert(`O ano ${ano1} é bissexto.`);
+                }else {
+                alert(`O ano ${ano1} não é bissexto.`)
+                }
+            }
 </script> -->
